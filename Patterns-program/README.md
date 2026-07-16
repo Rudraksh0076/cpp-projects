@@ -37,17 +37,6 @@ g++ hollow-diamond.cpp -o diamond
 ./diamond
 
 
-## 📸 Sample Output
-
-
-    *
-   * *
-  *   *
- *     *
-  *   *
-   * *
-    *
-
 
 ## 🚀 Future Improvements
 
