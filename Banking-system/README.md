@@ -1,66 +1,105 @@
 # 🏦 Mini Banking System
 
-A simple console-based banking system developed in *C++*. This project demonstrates the use of functions, conditional statements, loops, and basic user interaction.
+A console-based banking application developed in **C++** to practice programming fundamentals such as functions, loops, conditional statements, and input validation.
+
+This project is being improved step by step as I learn new C++ concepts.
+
+## 📌 Current Version
+
+**Version 2**
 
 ## ✨ Features
 
-- 💰 Deposit Money
-- 💸 Withdraw Money
-- 📊 Check Account Balance
-- 🔁 Menu-driven interface
-- ❌ Exit option
+- Create Bank Account
+- Secure Login using Account Number & PIN
+- Deposit Money
+- Withdraw Money
+- Check Balance
+- View Account Details
+- Change PIN
+- Interest Calculator
+- Loan Eligibility Checker
+- Logout
+- Duplicate Account Prevention
+- Three Login Attempts
+- Mobile Number Validation
+- 4-Digit PIN Validation
+- Input Validation
 
-## 🛠️ Technologies Used
+## 🆕 What's New in Version 2
+
+- Refactored the project using functions
+- Improved code organization
+- Added secure login system
+- Added PIN verification (3 attempts)
+- Added Change PIN feature
+- Added Interest Calculator
+- Added Loan Eligibility Checker
+- Added Mobile Number Validation
+- Added Duplicate Account Prevention
+- Added Input Validation
+- Improved menu-driven interface
+
+## 🛠 Technologies Used
 
 - C++
 - Visual Studio Code
-- Git & GitHub
+- g++ Compiler
 
-## 📚 Concepts Practiced
+## 📚 Concepts Used
 
 - Variables
 - Functions
+- Global Variables
 - Loops
 - Conditional Statements
-- Switch Case
-- User Input/Output
+- Nested Loops
+- Input Validation
+- Menu-Driven Programming
+
+## 📁 Project Structure
+
+```
+Mini-Banking-System
+│
+├── main.cpp
+└── README.md
+```
 
 ## ▶️ How to Run
 
-1. Clone this repository.
-2. Open Mini-Banking-System.cpp in any C++ IDE or VS Code.
-3. Compile the program using a C++ compiler.
-4. Run the executable.
+Compile:
 
-Example (g++):
+```bash
+g++ main.cpp -o bank
+```
 
-bash
-g++ Mini-Banking-System.cpp -o banking
-./banking
+Run:
 
+### Windows
 
-## 📸 Sample Menu
+```bash
+bank.exe
+```
 
+### Linux/macOS
 
-====== Mini Banking System ======
-
-1. Deposit
-2. Withdraw
-3. Check Balance
-4. Exit
-
-Enter your choice:
-
+```bash
+./bank
+```
 
 ## 🚀 Future Improvements
 
-- Multiple accounts
-- PIN authentication
-- File handling
-- Transaction history
-- Interest calculation
+- Multiple Accounts using Arrays
+- Permanent Data Storage using File Handling
+- Transaction History
+- Money Transfer
+- Object-Oriented Version using Classes
 
 ## 👨‍💻 Author
 
-*Rudraksh*
+**Rudraksh**
 
+A C++ learning project built to strengthen programming fundamentals through practical implementation.
+
+⭐ Feel free to explore the project and share feedback!
