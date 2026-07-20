@@ -60,7 +60,7 @@ void account(){
 }
 
 void banking_menu(){
-    cout << endl << "         Banking menu \n" << "============================== \n";
+    cout << endl << "============================== \n" << "         Banking menu \n" << "============================== \n";
     cout << endl << "1. Deposit Money\n";
     cout << "2. Withdraw Money\n";
     cout << "3. Check Balance\n";
@@ -171,21 +171,22 @@ int main(){
             bool loggedin = false;
             while(attempts < 3 && ! loggedin){
                 if(account_Created == false){
-                    cout << "Create an account first\n";
+                    cout << endl << "  Create an account first\n" << "============================= \n";
                     break;
                 }
                 cout << "Enter Account Number : ";
                 cin >> entered_account_no;
                 if(entered_account_no != account_number){
-                    cout << "Account number does not exist \n";
+                    cout << endl << "Account number does not exist \n" << "============================= \n";
                     attempts++;
+                    break;
                 }
                 else{
                     loggedin == true;
                     while(true){
                         cout << "Enter PIN : ";
                         cin >> entered_pin;
-                            if (entered_pin == pin){
+                        if (entered_pin == pin){
                             cout << endl << "==============================\n" << "       WELCOME " << name << endl << "==============================\n"; 
                             while(true){
                                 banking_menu();
@@ -219,11 +220,12 @@ int main(){
                                 else{
                                     cout << endl << "invalid choice.\n" << "Please try again" << endl;
                                 }
+                                }
+                                break;
                             }
-                            break;
-                    }
                         else {
-                            cout << "Invalid PIN\n";
+                            cout << endl << "     Invalid PIN\n" << "============================= \n";
+                            break;
                         }
                     }
                 }       
