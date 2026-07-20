@@ -37,12 +37,12 @@ void account(){
             cout << endl << "   Account NOT created \n" << "============================= \n";
             account_Created = false;
         }
-        else if(pin<1000 && pin>10000){
+        else if(pin<1000 || pin>10000){
             cout << endl << "Enter valid PIN\n";
             cout << endl << "   Account NOT created \n" << "============================= \n";
             account_Created = false;        
         }
-        else if(mobile_number<1000000000 && pin>10000000000){
+        else if(mobile_number<1000000000 || mobile_number>10000000000){
             cout << endl << "Enter valid Mobile Number\n";
             cout << endl << "   Account NOT created \n" << "============================= \n";
             account_Created = false;        
@@ -105,7 +105,7 @@ void change_PIN(){
     if (old_pin == pin){
         cout << "Enter new PIN : ";
         cin >> new_pin;
-        if(new_pin<1000 && pin>10000){
+        if(new_pin<1000 || new_pin>10000){
             cout << endl << "Enter valid PIN\n";
             cout << endl << " PIN not updated\n";                   
         }
@@ -167,66 +167,72 @@ int main(){
             account();
         }
         else if (choice == 2){
-            cout << "Enter Account Number : ";
-            cin >> entered_account_no;
-            if(account_Created == false){
-                cout << "Create an account first\n";
-            }
-            else if(entered_account_no != account_number){
-                cout << "Account number does not exist \n";
-            }
-            else{
-                while(true){
-                    cout << "Enter PIN : ";
-                    cin >> entered_pin;
-                    if (entered_pin == pin){
-                        cout << endl << "==============================\n" << "       WELCOME " << name << endl << "==============================\n"; 
-                        while(true){
-                            banking_menu();
-                            cout << endl << "enter your choice : ";
-                            cin >> c;
-                            if(c==1){
-                                deposits();
-                            }
-                            else if(c==2){
-                                withdraw(); 
-                            }
-                            else if(c==3){
-                                cout << endl << "Your balance is " << balance << endl << "================================= \n";
-                            }
-                            else if(c==4){
-                                cout << endl << "account holder : " << name << "\n" << "age : " << age << endl << "account number : " << account_number << endl << "current balance : " << balance << endl << "=============================== \n";
-                            }
-                            else if(c==5){
-                                change_PIN();
-                            }  
-                            else if(c==6){
-                                interest_calculator();
-                            }  
-                            else if(c==7){
-                                loan();
-                            }        
-                            else if(c==8){
-                                cout << endl << "         Thank you \n" << "================================ \n";
-                                break;
-                            }
-                            else{
-                                cout << endl << "invalid choice.\n" << "Please try again" << endl;
-                            }
-                        }
-                        break;
-                    }
-                    else {
-                        cout << "Invalid PIN\n";
-                    }
+            int attempts =0;
+            bool loggedin = false;
+            while(attempts < 3 && ! loggedin){
+                if(account_Created == false){
+                    cout << "Create an account first\n";
+                    break;
                 }
-            } 
-            cout << "too many false attempts";      
+                cout << "Enter Account Number : ";
+                cin >> entered_account_no;
+                if(entered_account_no != account_number){
+                    cout << "Account number does not exist \n";
+                    attempts++;
+                }
+                else{
+                    loggedin == true;
+                    while(true){
+                        cout << "Enter PIN : ";
+                        cin >> entered_pin;
+                            if (entered_pin == pin){
+                            cout << endl << "==============================\n" << "       WELCOME " << name << endl << "==============================\n"; 
+                            while(true){
+                                banking_menu();
+                                cout << endl << "enter your choice : ";
+                                cin >> c;
+                                if(c==1){
+                                    deposits();
+                                }
+                                else if(c==2){
+                                    withdraw(); 
+                                }
+                                else if(c==3){
+                                    cout << endl << "Your balance is " << balance << endl << "================================= \n";
+                                }
+                                else if(c==4){
+                                    cout << endl << "account holder : " << name << "\n" << "age : " << age << endl << "account number : " << account_number << endl << "current balance : " << balance << endl << "=============================== \n";
+                                }
+                                else if(c==5){
+                                    change_PIN();
+                                }  
+                                else if(c==6){
+                                    interest_calculator();
+                                }  
+                                else if(c==7){
+                                    loan();
+                                }        
+                                else if(c==8){
+                                    cout << endl << "         Thank you \n" << "================================ \n";
+                                    break;
+                                }
+                                else{
+                                    cout << endl << "invalid choice.\n" << "Please try again" << endl;
+                                }
+                            }
+                            break;
+                    }
+                        else {
+                            cout << "Invalid PIN\n";
+                        }
+                    }
+                }       
+            }
         }
         else if (choice == 3){
             cout << "You are now exiting\n";
             break;
         }
-    }
+        }
     return 0;
 } 
