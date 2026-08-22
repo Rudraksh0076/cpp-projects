@@ -1,35 +1,49 @@
 C++ Projects
 
-A collection of C++ programs and projects built while learning programming fundamentals, problem-solving, and Data Structures & Algorithms.
+A collection of C++ programs created while learning programming fundamentals, problem-solving, and software development.
+
+About This Repository
+
+This repository contains programs and practice work written in C++. It serves as a record of my learning journey as I explore programming concepts and improve my problem-solving skills.
+
+What I'm Practicing
+
+- Variables and Data Types
+- Input and Output
+- Conditional Statements
+- Loops
+- Functions
+- Arrays
+- Strings
+- Basic Problem Solving
+- Program Logic
 
 Repository Structure
 
-Banking System
+cpp-projects/
+│
+├── Banking-system/
+├── Patterns-program/
+└── README.md
 
-A console-based C++ application that demonstrates basic banking operations and programming concepts.
-
-Patterns Program
-
-A collection of pattern-based programs created to practice loops, logic, and problem-solving in C++.
-
-Concepts Practiced
-
-- Variables and data types
-- Conditional statements
-- Loops
-- Functions
-- Basic input/output
-- Problem-solving
-- Program logic
-
-Language Used
+Language
 
 - C++
 
-Learning Journey
+Tools
 
-This repository will continue to grow as I learn new concepts and build more C++ programs.
+- Visual Studio Code
+- Git
+- GitHub
+- C++ Compiler
+
+Goals
+
+- Strengthen C++ fundamentals
+- Improve problem-solving skills
+- Write clean and organized code
+- Continue adding new programs as I learn
 
 ---
 
-Learning by building and improving one program at a time.
+This repository will continue to evolve as I learn new concepts and improve my programming skills.
